@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Store - Ropa de Moda</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>Fashion Store</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#products" class="nav-link">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contacto</a>
+                    </li>
+                </ul>
+                <div class="nav-icons">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-user"></i>
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Slider -->
+    <section id="home" class="hero-slider">
+        <div class="slider-container">
+            <div class="slide active">
+                <div class="slide-content">
+                    <h1>Nueva Colección Primavera</h1>
+                    <p>Descubre las últimas tendencias de moda</p>
+                    <button class="btn-primary">Comprar Ahora</button>
+                </div>
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=600&fit=crop" alt="Colección Primavera">
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <h1>Descuentos hasta 50%</h1>
+                    <p>Aprovecha nuestras ofertas especiales</p>
+                    <button class="btn-primary">Ver Ofertas</button>
+                </div>
+                <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=1200&h=600&fit=crop" alt="Ofertas Especiales">
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <h1>Estilo Casual</h1>
+                    <p>Comodidad y elegancia para el día a día</p>
+                    <button class="btn-primary">Explorar</button>
+                </div>
+                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=1200&h=600&fit=crop" alt="Estilo Casual">
+            </div>
+        </div>
+        
+        <!-- Slider Controls -->
+        <button class="slider-btn prev" onclick="changeSlide(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="slider-btn next" onclick="changeSlide(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        
+        <!-- Slider Dots -->
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Categorías</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&h=400&fit=crop" alt="Camisetas">
+                    <h3>Camisetas</h3>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=300&h=400&fit=crop" alt="Pantalones">
+                    <h3>Pantalones</h3>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=300&h=400&fit=crop" alt="Vestidos">
+                    <h3>Vestidos</h3>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300&h=400&fit=crop" alt="Calzado">
+                    <h3>Calzado</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Productos Destacados</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&h=400&fit=crop" alt="Camiseta Casual">
+                        <div class="product-overlay">
+                            <button class="btn-add-cart">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Camiseta Casual</h3>
+                        <p class="product-price">$29.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=300&h=400&fit=crop" alt="Jeans Premium">
+                        <div class="product-overlay">
+                            <button class="btn-add-cart">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jeans Premium</h3>
+                        <p class="product-price">$79.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=300&h=400&fit=crop" alt="Vestido Elegante">
+                        <div class="product-overlay">
+                            <button class="btn-add-cart">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Vestido Elegante</h3>
+                        <p class="product-price">$89.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300&h=400&fit=crop" alt="Zapatillas Sport">
+                        <div class="product-overlay">
+                            <button class="btn-add-cart">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Zapatillas Sport</h3>
+                        <p class="product-price">$119.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=300&h=400&fit=crop" alt="Blazer Formal">
+                        <div class="product-overlay">
+                            <button class="btn-add-cart">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Blazer Formal</h3>
+                        <p class="product-price">$149.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=300&h=400&fit=crop" alt="Sudadera Hoodie">
+                        <div class="product-overlay">
+                            <button class="btn-add-cart">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Sudadera Hoodie</h3>
+                        <p class="product-price">$59.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fashion Store</h3>
+                    <p>Tu tienda de moda online favorita</p>
+                    <div class="social-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#products">Productos</a></li>
+                        <li><a href="#about">Nosotros</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                    <p><i class="fas fa-envelope"></i> info@fashionstore.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fashion Store. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
